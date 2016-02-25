@@ -56,7 +56,7 @@ You've deployed this sample add-in at this point. Now you need to let Word know 
 
 ### Word 2016 for Windows setup
 
-1. (Windows only) Unzip and run this [registry key](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/AddInCommandsUndark/EnableAppCmdXLWD.zip) to activate the add-in commands feature. This is required while add-in commands are a **preview feature**.
+1. (Windows only) Unzip and run this [registry key](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/AddInCommandsUndark) to activate the add-in commands feature. This is required while add-in commands are a **preview feature**.
 2. Create a network share, or [share a folder to the network](https://technet.microsoft.com/en-us/library/cc770880.aspx) and place the [manifest-word-add-in-canvas.xml](manifest-word-add-in-canvas.xml) manifest file in it.
 3. Launch Word and open a document.
 4. Choose the **File** tab, and then choose **Options**.
