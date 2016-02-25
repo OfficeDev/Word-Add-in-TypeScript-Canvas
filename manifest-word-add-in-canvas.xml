@@ -6,15 +6,15 @@
     <ProviderName>Microsoft</ProviderName>
     <DefaultLocale>en-us</DefaultLocale>
     <!--This is the name shown in the Word UI.-->
-    <DisplayName DefaultValue="(local) Image callout add-in" />
+    <DisplayName DefaultValue="(Azure) Image callout add-in" />
     <Description DefaultValue="See how you can use the Canvas API with Word add-ins." />
     <!--Icon for your add-in. Used on installation screens and the add-ins dialog -->
-    <IconUrl DefaultValue="https://localhost:8085/media/groupIcon1_default32.png" />
+    <IconUrl DefaultValue="https://callouts.azurewebsites.net/media/groupIcon1_default32.png" />
     <Hosts>
         <Host Name="Document" />
     </Hosts>
     <DefaultSettings>
-        <SourceLocation DefaultValue="https://localhost:8085" />
+        <SourceLocation DefaultValue="https://callouts.azurewebsites.net" />
     </DefaultSettings>
     <Permissions>ReadWriteDocument</Permissions>
 
@@ -28,7 +28,7 @@
                 <DesktopFormFactor>
                     <!-- Identifies the html file the contains a script reference to a function that an add-in command will use. -->
                     <FunctionFile resid="InsertImageMenuUrl"/>
-                    <!-- PrimaryCommandSurface declares that this add-in 
+                    <!-- PrimaryCommandSurface declares that this add-in
                             command will be used from the ribbon in Office. -->
                     <ExtensionPoint xsi:type="PrimaryCommandSurface">
                         <!-- Add the add-in command button to the Developer tab. You can use other existing tabs, or create a custom tab. -->
@@ -56,7 +56,7 @@
                                         <bt:Image size="32" resid="icon1_32x32" />
                                         <bt:Image size="80" resid="icon1_80x80" />
                                     </Icon>
-                                    <!-- Declares what the button does. This button will show the task pane 
+                                    <!-- Declares what the button does. This button will show the task pane
                                     and open the page identified by the Sample_Url resource. -->
                                     <Action xsi:type="ShowTaskpane">
                                         <SourceLocation resid="Sample_Url" />
@@ -77,7 +77,7 @@
                                     <Action xsi:type="ExecuteFunction">
                                         <FunctionName>insertImage</FunctionName>
                                     </Action>
-                                </Control>				    
+                                </Control>
                             </Group>
                             <!-- Label of your tab -->
                             <!-- If validating with XSD it needs to be at the end, we might change this before release -->
@@ -99,8 +99,8 @@
                                     <bt:Image size="32" resid="icon1_32x32" />
                                     <bt:Image size="80" resid="icon1_80x80" />
                                 </Icon>
-                                <!-- Declares what the button does. This button will run a function named 
-                                writeText. writeText must be in the global execution context of the functionfile. -->                                    
+                                <!-- Declares what the button does. This button will run a function named
+                                writeText. writeText must be in the global execution context of the functionfile. -->
                                 <Action xsi:type="ExecuteFunction">
                                     <FunctionName>insertImage</FunctionName>
                                 </Action>
@@ -110,27 +110,27 @@
                 </DesktopFormFactor>
             </Host>
         </Hosts>
-        <!-- All attributes named resid refer to the resources 
+        <!-- All attributes named resid refer to the resources
                 found in the Resources element. -->
         <Resources>
             <bt:Images>
                 <!-- Image resource URLs. These must be located at HTTPS endpoints.-->
-                <bt:Image id="groupIcon1_16x16" DefaultValue="https://localhost:8085/media/groupIcon1_default16.png"></bt:Image>
-                <bt:Image id="groupIcon1_32x32" DefaultValue="https://localhost:8085/media/groupIcon1_default32.png"></bt:Image>
-                <bt:Image id="groupIcon1_80x80" DefaultValue="https://localhost:8085/media/groupIcon1_default80.png"></bt:Image>
-                <bt:Image id="icon1_16x16" DefaultValue="https://localhost:8085/media/icon_default16.png"></bt:Image>
-                <bt:Image id="icon1_32x32" DefaultValue="https://localhost:8085/media/icon_default32.png"></bt:Image>
-                <bt:Image id="icon1_80x80" DefaultValue="https://localhost:8085/media/icon_default80.png"></bt:Image>
+                <bt:Image id="groupIcon1_16x16" DefaultValue="https://callouts.azurewebsites.net/media/groupIcon1_default16.png"></bt:Image>
+                <bt:Image id="groupIcon1_32x32" DefaultValue="https://callouts.azurewebsites.net/media/groupIcon1_default32.png"></bt:Image>
+                <bt:Image id="groupIcon1_80x80" DefaultValue="https://callouts.azurewebsites.net/media/groupIcon1_default80.png"></bt:Image>
+                <bt:Image id="icon1_16x16" DefaultValue="https://callouts.azurewebsites.net/media/icon_default16.png"></bt:Image>
+                <bt:Image id="icon1_32x32" DefaultValue="https://callouts.azurewebsites.net/media/icon_default32.png"></bt:Image>
+                <bt:Image id="icon1_80x80" DefaultValue="https://callouts.azurewebsites.net/media/icon_default80.png"></bt:Image>
             </bt:Images>
             <bt:Urls>
-                <bt:Url id="Sample_Url" DefaultValue="https://localhost:8085">
-                    <bt:Override Locale="ja-jp" Value="https://localhost:8085" />
+                <bt:Url id="Sample_Url" DefaultValue="https://callouts.azurewebsites.net">
+                    <bt:Override Locale="ja-jp" Value="https://callouts.azurewebsites.net" />
                 </bt:Url>
-                <bt:Url id="InsertImageMenuUrl" DefaultValue="https://localhost:8085/insertimage.html">
-                    
+                <bt:Url id="InsertImageMenuUrl" DefaultValue="https://callouts.azurewebsites.net/insertimage.html">
+
                 </bt:Url>
             </bt:Urls>
-            <!-- Be careful about mixing up what can be a short and a long string. 
+            <!-- Be careful about mixing up what can be a short and a long string.
                     A common issue with add-in commands is mixing short and long strings.
                     Read the documentation to make sure you use the correct string type.
                     https://msdn.microsoft.com/EN-US/library/office/mt621545.aspx -->
@@ -155,7 +155,7 @@
                 </bt:String>
                 <bt:String id="Control_InsertImg_Label" DefaultValue="Insert image from function file">
                     <bt:Override Locale="ja-jp" Value="吹き出しは、アドインsupertip" />
-                </bt:String>		    
+                </bt:String>
                 <bt:String id="Ctx_Control_SuperTip_Label" DefaultValue="Callout add-in supertip">
                     <bt:Override Locale="ja-jp" Value="吹き出しは、アドインsupertip" />
                 </bt:String>
@@ -168,7 +168,7 @@
                     <bt:Override Locale="ja-jp" Value="キャンバスアドイン作業ウィンドウを開きます。" />
                 </bt:String>
                 <bt:String id="Ctx_Control_SuperTip_Desc" DefaultValue="Inserts an image loaded into the DOM from the FunctionFile.">
-                </bt:String>                    
+                </bt:String>
             </bt:LongStrings>
         </Resources>
     </VersionOverrides>
