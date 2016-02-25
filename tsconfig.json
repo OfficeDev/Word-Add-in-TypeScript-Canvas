@@ -1,0 +1,27 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "rootDir": "./src",
+        "outDir": "./www"
+    },
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./typings/browser.d.ts"
+    ],
+    "version": "1.8",
+    "atom": {
+        "rewriteTsconfig": true
+    },
+    "files": [
+        "./typings/browser.d.ts",
+        "./src/sample.ts"
+    ]
+}

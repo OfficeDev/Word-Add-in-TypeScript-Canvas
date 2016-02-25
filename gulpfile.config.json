@@ -1,0 +1,20 @@
+{
+    "lib": {
+        "source": "node_modules",
+        "dest": "www\\lib"
+    },
+    "app": {
+        "source": "src",
+        "dest": "www"
+    },
+    "server": {
+        "root": "www\\",
+        "host": "localhost",
+        "port": 8085,
+        "fallback": "www\\index.html",
+        "serverkey": "ia.key",
+        "servercert": "ia.crt",
+        "cacert": "ca.crt",
+        "passphrase": ""
+    }
+}

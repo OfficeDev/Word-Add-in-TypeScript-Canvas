@@ -1,0 +1,42 @@
+{
+  "name": "word-add-in-canvas",
+  "description": "Learn how to use canvas with a Word add-in.",
+  "license": "MIT",
+  "main": "app/server.js",
+  "version": "1.0.0",
+  "author": {
+    "name": "Michael Mainer"
+  },
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "office-ui-fabric": "^1.2.0"
+  },
+  "devDependencies": {
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-connect-proxy": "^0.3.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.10.0",
+    "merge2": "^0.3.6",
+    "tsconfig-glob": "^0.3.3"
+  },
+  "overrides": {
+    "jquery": "dist/jquery.js",
+    "office-ui-fabric": [
+      "dist/css/fabric.css",
+      "dist/css/fabric.rtl.css",
+      "dist/css/fabric.components.css",
+      "dist/css/fabric.components.rtl.css",
+      "dist/js/jquery.fabric.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OfficeDev/Word-Add-in-Canvas"
+  }
+}
