@@ -26,7 +26,7 @@ This Word add-in sample shows you how to:
 
 Definition- **add-in command**: an extension to the Word UI that allows you to either launch the add-in in a task pane or run a script, from either the ribbon or a context menu.
 
-If you just want to see this in action, skip to [Word 2016 for Windows setup](#word-2016-for-windows-setup). Open the [manifest](#manifest-word-add-in-canvas) and change all occurrences of ```localhost:8085``` to ```callouts.azurewebsites.net```.
+If you just want to see this in action, skip to [Word 2016 for Windows setup](#word-2016-for-windows-setup) and use this [manifest](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/blob/deploy2Azure/manifest-word-add-in-canvas.xml).
 
 ## Required tools
 
