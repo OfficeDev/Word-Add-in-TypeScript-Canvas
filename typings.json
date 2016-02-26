@@ -2,6 +2,6 @@
   "name": "word-add-in-canvas",
   "ambientDependencies": {
     "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#d1f6bde13f2209be42e86c3686761e8bfcbb50a5",
-    "office-js": "github:DefinitelyTyped/DefinitelyTyped/office-js/office-js.d.ts#2e7a477ac2b6471055aa6e0e56b333e8f327d6b7"
+    "office-js": "github:DefinitelyTyped/DefinitelyTyped/office-js/office-js.d.ts"
   }
 }
