@@ -41,7 +41,7 @@ To use the Image callouts Word add-in sample, the following are required.
 
 ## How to install certificates
 
-You'll need a certificate to run this sample since add-in commands require HTTPS and since add-in commands are UI-less, you can't accept invalid certificates. Run [gen-cert.sh](#gen-cert.sh) to create the certificate and then you'll need to install ca.crt into your Trusted Root Certification Authorities store (Windows).
+You'll need a certificate to run this sample since add-in commands require HTTPS and since add-in commands are UI-less, you can't accept invalid certificates. Run [./gen-cert.sh](#gen-cert.sh) to create the certificate and then you'll need to install ca.crt into your Trusted Root Certification Authorities store (Windows).
 
 ## How to setup and run the app
 
