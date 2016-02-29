@@ -41,7 +41,7 @@ To use the Image callouts Word add-in sample, the following are required.
 
 ## How to install certificates
 
-You'll need a certificate to run this sample since add-in commands require HTTPS and since add-in commands are UI-less, you can't accept invalid certificates. Run [./gen-cert.sh](#gen-cert.sh) to create the certificate and then you'll need to install ca.crt into your Trusted Root Certification Authorities store (Windows).
+You'll need a certificate to run this sample since add-in commands require HTTPS and since add-in commands are UI-less, you can't accept invalid certificates. Run [./gen-cert.sh](#gen-cert.sh) to create the certificate and then you'll need to install ca.crt into your Trusted Root Certification Authorities store (Windows) or your keychain (Mac).
 
 ## How to setup and run the app
 
@@ -66,6 +66,13 @@ You've deployed this sample add-in at this point. Now you need to let Word know 
 8. Select the **Show in Menu** check box, and then choose **OK**.
 9. A message is displayed to inform you that your settings will be applied the next time you start Office. Close and restart Word.
 
+### Word 2016 for Mac setup
+
+Add-in commands are not supported as of the release of this repository. 
+
+1. Create a folder called “wef” in Users/Library/Containers/com.microsoft.word/Data/Documents/.
+2. Put the manifest, manifest-word-add-in-canvas.xml, in the wef folder (Users/Library/Containers/com.microsoft.word/Data/Documents/wef)
+
 ## How to run the add-in in Word 2016 for Windows
 
 1. Open a Word document.
@@ -75,6 +82,12 @@ You've deployed this sample add-in at this point. Now you need to let Word know 
 5. If add-in commands are supported by your version of Word, the UI will inform you that the add-in was loaded. You can use the **Callout add-in** tab to load the add-in in the UI and to insert an image into the document. You can also use the right-click context menu to insert an image into the document.
 6. If add-in commands are not supported by your version of Word, the add-in will load in a task pane. You'll need to insert a picture into the Word document to use the functionality of the add-in.
 7. Select an image in the Word document, and load it into the taskpane by selecting *Load image from doc*. You can now insert callouts into the image. Select *Insert image into doc* to place the updated image into the Word doc. The add-in wil generate placeholder descriptions for each of the callouts.
+
+## How to run the add-in in Word 2016 for Mac
+
+1. Open a Word document.
+2. Select the Insert tab > My Add-ins drop down. You should see the add-in listed in the drop down. Select it and it will load the add-in.
+
 
 ## FAQ
 
