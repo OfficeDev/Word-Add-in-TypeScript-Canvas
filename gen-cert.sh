@@ -51,7 +51,7 @@ else
     openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out ia.crt
 
     echo ""
-    echo "NEXT STEP (required): install the root CA (ca.crt) in your Mac keychain." 
+    echo "NEXT STEP (required): install the root CA (ca.crt) in your Mac certificate keychain." 
 fi
 
 
