@@ -5,7 +5,7 @@
 * [Summary](#summary)
 * [Required tools](#required-tools)
 * [How to install certificates](#how-to-install-certificates)
-* [How to setup and run the app](#how-to-setup-and-run-the-app)
+* [How to set up and run the app](#how-to-set-up-and-run-the-app)
 * [How to run the add-in in Word 2016 for Windows](#how-to-run-the-add-in-in-Word-2016-for-Windows)
 * [FAQ](#faq)
 * [Questions and comments](#questions-and-comments)
@@ -26,7 +26,7 @@ This Word add-in sample shows you how to:
 
 Definition- **add-in command**: an extension to the Word UI that allows you to either launch the add-in in a task pane or run a script, from either the ribbon or a context menu.
 
-If you just want to see this in action, skip to [Word 2016 for Windows setup](#word-2016-for-windows-setup) and use this [manifest](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/blob/deploy2Azure/manifest-word-add-in-canvas.xml).
+If you just want to see this in action, skip to [Word 2016 for Windows set up](#word-2016-for-windows-set-up) and use this [manifest](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/blob/deploy2Azure/manifest-word-add-in-canvas.xml).
 
 ## Required tools
 
@@ -43,7 +43,7 @@ To use the Image callouts Word add-in sample, the following are required.
 
 You'll need a certificate to run this sample since add-in commands require HTTPS and since add-in commands are UI-less, you can't accept invalid certificates. Run [gen-cert.sh](#gen-cert.sh) to create the certificate and then you'll need to install ca.crt into your Trusted Root Certification Authorities store (Windows).
 
-## How to setup and run the app
+## How to set up and run the app
 
 1. Install the TypeScript definition manager by typing ```npm install typings -g``` at the command line.
 2. Install the Typescript definitions identified in typings.json by running ```typings install``` in the project's root directory at the command line. Note that the TypeScript definitions are out of date and will cause errors. You'll need to fake the missing definitions until the official definitions are updated on DefinatelyTyped. The definitions are in a directory called typings.
@@ -54,7 +54,7 @@ You'll need a certificate to run this sample since add-in commands require HTTPS
 
 You've deployed this sample add-in at this point. Now you need to let Word know where to find the add-in.
 
-### Word 2016 for Windows setup
+### Word 2016 for Windows set up
 
 1. (Windows only) Unzip and run this [registry key](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/AddInCommandsUndark) to activate the add-in commands feature. This is required while add-in commands are a **preview feature**.
 2. Create a network share, or [share a folder to the network](https://technet.microsoft.com/en-us/library/cc770880.aspx) and place the [manifest-word-add-in-canvas.xml](manifest-word-add-in-canvas.xml) manifest file in it.
