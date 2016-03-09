@@ -43,7 +43,6 @@
                                     <bt:Image size="32" resid="groupIcon1_32x32" />
                                     <bt:Image size="80" resid="groupIcon1_80x80" />
                                 </Icon>
-                                <Tooltip resid="Control_SuperTip_Label" />
                                 <!-- Declares a button -->
                                 <Control xsi:type="Button" id="Canvas.Button.Tab">
                                     <Label resid="Control_Label" />
