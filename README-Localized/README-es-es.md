@@ -99,7 +99,7 @@ Aquí tiene más recursos para ayudarle a crear complementos basados en la API d
 * [Explorador de fragmentos de código para Word](http://officesnippetexplorer.azurewebsites.net/#/snippets/word)
 * [Referencia de la API de JavaScript de complementos de Word](https://github.com/OfficeDev/office-js-docs/tree/master/word/word-add-ins-javascript-reference)
 * [Ejemplo de SillyStories](https://github.com/OfficeDev/Word-Add-in-SillyStories): obtenga información sobre cómo cargar archivos docx desde un servicio e insertarlos en un documento de Word abierto.
-* [Ejemplo de autenticación de servidor del complemento de Office](https://github.com/OfficeDev/Office-Add-in-Nodejs-ServerAuth): obtenga información sobre cómo usar proveedores de Azure y Google OAuth para autenticar a usuarios de complemento.
+* [Ejemplo de autenticación de servidor del complemento de office para Node.js](https://github.com/OfficeDev/Office-Add-in-Nodejs-ServerAuth): obtenga información sobre cómo usar proveedores de Azure y Google OAuth para autenticar a usuarios de complemento.
 
 ## Copyright
 Copyright (c) 2016 Microsoft. Todos los derechos reservados.
