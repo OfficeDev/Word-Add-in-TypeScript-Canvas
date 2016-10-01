@@ -22,7 +22,7 @@ This Word add-in sample shows you how to:
 4. Implement add-in commands that both launch an add-in from the ribbon and run a script from both the ribbon and a context menu.
 5. Use the Office UI Fabric to create a native Word-like experience for your add-in.
 
-![](/readme-images/Word-Add-in-TypeScript-Canvas.gif)
+![](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/blob/master/readme-images/Word-Add-in-TypeScript-Canvas.gif)
 
 Definition- **add-in command**: an extension to the Word UI that allows you to either launch the add-in in a task pane or run a script, from either the ribbon or a context menu.
 
@@ -94,10 +94,10 @@ Questions about add-in development in general should be posted to [Stack Overflo
 Here are more resources to help you create Word Javascript API based add-ins:
 
 * [Office Add-ins platform overview](https://msdn.microsoft.com/EN-US/library/office/jj220082.aspx)
-* [Word add-ins](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins.md)
-* [Word add-ins programming overview](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins-programming-guide.md)
+* [Word add-ins](https://github.com/OfficeDev/office-js-docs/blob/master/docs/word/word-add-ins.md)
+* [Word add-ins programming overview](https://github.com/OfficeDev/office-js-docs/blob/master/docs/word/word-add-ins-programming-guide.md)
 * [Snippet Explorer for Word](http://officesnippetexplorer.azurewebsites.net/#/snippets/word)
-* [Word add-ins JavaScript API Reference](https://github.com/OfficeDev/office-js-docs/tree/master/word/word-add-ins-javascript-reference)
+* [Word add-ins JavaScript API Reference](https://github.com/OfficeDev/office-js-docs/tree/master/docs/word/word-add-ins-javascript-reference)
 * [SillyStories sample](https://github.com/OfficeDev/Word-Add-in-SillyStories) - learn how to load docx files from a service and insert the files into an open Word document.
 * [Office Add-in Server Authentication Sample for Node.js](https://github.com/OfficeDev/Office-Add-in-Nodejs-ServerAuth) - learn how use Azure and Google OAuth providers for authenticating add-in users.
 
