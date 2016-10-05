@@ -93,11 +93,7 @@ Questions about add-in development in general should be posted to [Stack Overflo
 
 Here are more resources to help you create Word Javascript API based add-ins:
 
-* [Office Add-ins platform overview](https://msdn.microsoft.com/EN-US/library/office/jj220082.aspx)
-* [Word add-ins](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins.md)
-* [Word add-ins programming overview](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins-programming-guide.md)
-* [Snippet Explorer for Word](http://officesnippetexplorer.azurewebsites.net/#/snippets/word)
-* [Word add-ins JavaScript API Reference](https://github.com/OfficeDev/office-js-docs/tree/master/word/word-add-ins-javascript-reference)
+* [Word Add-ins documentation and samples](https://dev.office.com/word)
 * [SillyStories sample](https://github.com/OfficeDev/Word-Add-in-SillyStories) - learn how to load docx files from a service and insert the files into an open Word document.
 * [Office Add-in Server Authentication Sample for Node.js](https://github.com/OfficeDev/Office-Add-in-Nodejs-ServerAuth) - learn how use Azure and Google OAuth providers for authenticating add-in users.
 
