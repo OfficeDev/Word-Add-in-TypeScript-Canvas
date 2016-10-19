@@ -1,4 +1,4 @@
-# Ejemplo del complemento de Word de globos de imagen: cargar, editar e insertar imágenes
+# <a name="image-callouts-word-add-in-sample:-load,-edit,-and-insert-images"></a>Ejemplo del complemento de Word de globos de imagen: cargar, editar e insertar imágenes
 
 **Tabla de contenido**
 
@@ -12,7 +12,7 @@
 * [Obtener más información](#learn-more)
 
 
-## Resumen
+## <a name="summary"></a>Resumen
 
 Este ejemplo de complemento de Word muestra cómo:
 
@@ -28,22 +28,22 @@ Definición de **comando de complemento**: una extensión a la interfaz de usuar
 
 Si quiere ver esto en acción, vaya a [Configuración de Word 2016 para Windows](#word-2016-for-windows-set-up) y use este [manifiesto](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/blob/deploy2Azure/manifest-word-add-in-canvas.xml).
 
-## Herramientas necesarias
+## <a name="required-tools"></a>Herramientas necesarias
 
 Para usar el ejemplo del complemento de globos de imagen de Word, se requiere lo siguiente.
 
 * Word 2016 16.0.6326.0000, una versión posterior o cualquier cliente compatible con la API de JavaScript de Word. En este ejemplo se realiza una comprobación de requisito para ver si se está ejecutando en un host compatible para las API de JavaScript.
 * npm (https://www.npmjs.com/) para instalar las dependencias. Viene con [NodeJS](https://nodejs.org/en/).
-* (Windows) [GIT Bash](http://www.git-scm.com/downloads).
+* (Windows) [Git Bash](http://www.git-scm.com/downloads).
 * Clonar este repositorio en el equipo local.
 
 > Nota: Word para Mac 2016 no admite comandos de complemento en este momento. Puede ejecutar este ejemplo en Mac sin los comandos de complemento.
 
-## Cómo instalar certificados
+## <a name="how-to-install-certificates"></a>Cómo instalar certificados
 
 Necesitará un certificado para ejecutar este ejemplo, ya que los comandos de complemento requieren HTTPS y, como los comandos de complementos no tienen interfaz de usuario, no puede aceptar certificados no válidos. Ejecute [./gen-cert.sh](#gen-cert.sh) para crear el certificado y, después, tendrá que instalar ca.crt en el almacén de entidades de certificación raíz de confianza (Windows).
 
-## Cómo configurar y ejecutar la aplicación
+## <a name="how-to-set-up-and-run-the-app"></a>Cómo configurar y ejecutar la aplicación
 
 1. Instale el Administrador de definición de TypeScript al escribir ```npm install typings -g``` en la línea de comandos.
 2. Instale las definiciones de TypeScript identificadas en typings.json al ejecutar ```typings install``` en el directorio raíz del proyecto en la línea de comandos.
@@ -54,19 +54,19 @@ Necesitará un certificado para ejecutar este ejemplo, ya que los comandos de co
 
 En este punto, ha implementado este complemento de ejemplo. Ahora debe indicarle a Word dónde encontrar el complemento.
 
-### Configuración de Word 2016 para Windows
+### <a name="word-2016-for-windows-set-up"></a>Configuración de Word 2016 para Windows
 
 1. (Solo Windows) Descomprima y ejecute esta [clave del Registro](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/AddInCommandsUndark) para activar la característica de comandos del complemento. Esto es necesario mientras los comandos de complementos son una **característica en vista previa**.
-2. Cree un recurso compartido de red o [comparta una carpeta en la red](https://technet.microsoft.com/es-es/library/cc770880.aspx) y coloque el archivo de manifiesto [manifest-word-add-in-canvas.xml](manifest-word-add-in-canvas.xml) en él.
+2. Cree un recurso compartido de red o [comparta una carpeta en la red](https://technet.microsoft.com/en-us/library/cc770880.aspx) y coloque el archivo de manifiesto [manifest-word-add-in-canvas.xml](manifest-word-add-in-canvas.xml) en él.
 3. Inicie Word y abra un documento.
 4. Seleccione la pestaña **Archivo** y haga clic en **Opciones**.
 5. Haga clic en **Centro de confianza** y seleccione el botón **Configuración del Centro de confianza**.
-6. Seleccione **Catálogos de complementos de confianza**.
+6. Elija **Catálogos de complementos de confianza**.
 7. En el cuadro **Dirección URL del catálogo**, escriba la ruta de red al recurso compartido de carpeta que contiene manifest-word-add-in-canvas.xml y después elija **Agregar catálogo**.
-8. Active la casilla **Mostrar en menú** y haga clic en **Aceptar**.
+8. Active la casilla **Mostrar en el menú** y elija **Aceptar**.
 9. Aparecerá un mensaje para informarle de que la configuración se aplicará la próxima vez que inicie Office. Cierre y vuelva a iniciar Word.
 
-## Cómo ejecutar el complemento en Word 2016 para Windows
+## <a name="how-to-run-the-add-in-in-word-2016-for-windows"></a>Cómo ejecutar el complemento en Word 2016 para Windows
 
 1. Abra un documento de Word.
 2. En la pestaña **Insertar** de Word 2016, elija **Mis complementos**.
@@ -76,30 +76,26 @@ En este punto, ha implementado este complemento de ejemplo. Ahora debe indicarle
 6. Si los comandos del complemento no son compatibles con su versión de Word, el complemento se cargará en un panel de tareas. Debe insertar una imagen en el documento de Word para usar la funcionalidad del complemento.
 7. Seleccione una imagen en el documento de Word y cárguela en el panel de tareas al seleccionar *Load image from doc* (Cargar imagen del documento). Ahora puede insertar globos en la imagen. Seleccione *Insert image into doc* (Insertar imagen en el documento) para colocar la imagen actualizada en el documento de Word. El complemento generará descripciones de marcador de posición para cada uno de los globos.
 
-## Preguntas más frecuentes
+## <a name="faq"></a>Preguntas más frecuentes
 
 * ¿Funcionarán los comandos de complemento en Mac y iPad? No, no funcionarán en Mac o iPad a partir de la publicación de este archivo Léame.
 * ¿Por qué no aparece mi complemento en la ventana **Mis complementos**? El manifiesto del complemento puede tener un error. Le sugiero que valide el manifiesto en el [esquema del manifiesto](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD).
 * ¿Por qué no se llama al archivo de función para los comandos de mis complementos? Los comandos de complemento requieren HTTPS. Ya que los comandos de complemento requieren TLS y no hay una interfaz de usuario, no puede ver si hay un problema de certificado. Si tiene que aceptar un certificado no válido en el panel de tareas, el comando de complemento no funcionará.
 * ¿Por qué no responden los comandos de instalación npm? Probablemente sí que respondan. Tarda un poco en Windows.
 
-## Preguntas y comentarios
+## <a name="questions-and-comments"></a>Preguntas y comentarios
 
 Nos encantaría recibir sus comentarios sobre el ejemplo del complemento de Word Globos de imagen. Puede enviarnos sus preguntas y sugerencias a través de la sección [Problemas](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/issues) de este repositorio.
 
 Las preguntas generales sobre desarrollo de complementos deben publicarse en [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Asegúrese de que sus preguntas o comentarios se etiquetan con [office-js], [word-addins] y [API]. Vemos esas etiquetas.
 
-## Obtener más información
+## <a name="learn-more"></a>Obtener más información
 
-Aquí tiene más recursos para ayudarle a crear complementos basados en la API de JavaScript de Word:
+Aquí encontrará más recursos para que le resulte más fácil crear complementos basados en la API de JavaScript para Word:
 
-* [Información general sobre la plataforma de complementos de Office](https://msdn.microsoft.com/es-es/library/office/jj220082.aspx)
-* [Complementos de Word](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins.md)
-* [Introducción a la programación de complementos de Word](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins-programming-guide.md)
-* [Explorador de fragmentos de código para Word](http://officesnippetexplorer.azurewebsites.net/#/snippets/word)
-* [Referencia de la API de JavaScript de complementos de Word](https://github.com/OfficeDev/office-js-docs/tree/master/word/word-add-ins-javascript-reference)
+* [Documentación y ejemplos de complementos de Word](https://dev.office.com/word)
 * [Ejemplo de SillyStories](https://github.com/OfficeDev/Word-Add-in-SillyStories): obtenga información sobre cómo cargar archivos docx desde un servicio e insertarlos en un documento de Word abierto.
-* [Ejemplo de autenticación de servidor del complemento de office para Node.js](https://github.com/OfficeDev/Office-Add-in-Nodejs-ServerAuth): obtenga información sobre cómo usar proveedores de Azure y Google OAuth para autenticar a usuarios de complemento.
+* [Ejemplo de autenticación de servidor del complemento de Office](https://github.com/OfficeDev/Office-Add-in-Nodejs-ServerAuth): obtenga información sobre cómo usar proveedores de Azure y Google OAuth para autenticar a usuarios de complemento.
 
-## Copyright
+## <a name="copyright"></a>Copyright
 Copyright (c) 2016 Microsoft. Todos los derechos reservados.
