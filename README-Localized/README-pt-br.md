@@ -1,4 +1,4 @@
-# Exemplo de suplemento do Word da imagem: carregar, editar e inserir imagens
+# <a name="image-callouts-word-add-in-sample:-load,-edit,-and-insert-images"></a>Exemplo de suplemento do Word da imagem: carregar, editar e inserir imagens
 
 **Sumário**
 
@@ -12,7 +12,7 @@
 * [Saiba mais](#learn-more)
 
 
-## Resumo
+## <a name="summary"></a>Resumo
 
 Este exemplo de suplemento do Word mostra como:
 
@@ -28,7 +28,7 @@ Definição - **comando de suplemento**: uma extensão para a interface do usuá
 
 Se você quiser ver isso em ação, passe diretamente para [configuração do Word 2016 para Windows](#word-2016-for-windows-set-up) e use esse [manifesto](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/blob/deploy2Azure/manifest-word-add-in-canvas.xml).
 
-## Ferramentas necessárias
+## <a name="required-tools"></a>Ferramentas necessárias
 
 Para usar o exemplo de suplemento do Word Textos explicativos da imagem, são necessários.
 
@@ -39,11 +39,11 @@ Para usar o exemplo de suplemento do Word Textos explicativos da imagem, são ne
 
 > Observação: O Word para Mac 2016 não é compatível com comandos de suplemento neste momento. Esse exemplo pode ser executado no Mac sem os comandos de suplemento.
 
-## Como instalar certificados
+## <a name="how-to-install-certificates"></a>Como instalar certificados
 
 Será necessário um certificado para executar esse exemplo já que os comandos de suplemento exigem HTTPS e, como eles não têm uma interface do usuário, você não pode aceitar certificados inválidos. Execute [./gen-cert.sh](#gen-cert.sh) para criar o certificado e, em seguida, será necessário instalar ca.crt em sua loja de Autoridades de Certificação Raiz Confiáveis (Windows).
 
-## Como configurar e executar o aplicativo
+## <a name="how-to-set-up-and-run-the-app"></a>Como configurar e executar o aplicativo
 
 1. Instale o Gerenciador de definição do TypeScript digitando ```npm install typings -g``` na linha de comando.
 2. Instale as definições do Typescript identificadas em typings.json executando ```typings install``` no diretório raiz do projeto na linha de comando.
@@ -54,10 +54,10 @@ Será necessário um certificado para executar esse exemplo já que os comandos 
 
 Nesse momento, esse suplemento do exemplo foi implementado. Agora, você precisa informar ao Word onde encontrar o suplemento.
 
-### Configuração do Word 2016 para Windows
+### <a name="word-2016-for-windows-set-up"></a>Configuração do Word 2016 para Windows
 
 1. (Windows) Descompacte e execute essa [chave de registro](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/AddInCommandsUndark) para ativar o recurso de comandos de suplemento. Isso é necessário porque os comandos de suplemento são um **recurso de visualização**.
-2. Crie um compartilhamento de rede ou [compartilhe uma pasta para a rede](https://technet.microsoft.com/pt-br/library/cc770880.aspx) e coloque o arquivo de manifesto [manifest-word-add-in-canvas.xml](manifest-word-add-in-canvas.xml) nele.
+2. Crie um compartilhamento de rede ou [compartilhe uma pasta para a rede](https://technet.microsoft.com/en-us/library/cc770880.aspx) e coloque o arquivo de manifesto [manifest-word-add-in-canvas.xml](manifest-word-add-in-canvas.xml) nele.
 3. Inicie o Word e abra um documento.
 4. Escolha a guia **Arquivo** e escolha **Opções**.
 5. Escolha **Central de Confiabilidade**, e escolha o botão **Configurações da Central de Confiabilidade**.
@@ -66,7 +66,7 @@ Nesse momento, esse suplemento do exemplo foi implementado. Agora, você precisa
 8. Selecione a caixa de seleção **Mostrar no Menu** e, em seguida, escolha **OK**.
 9. Será exibida uma mensagem para informá-lo de que suas configurações serão aplicadas na próxima vez que você iniciar o Office. Feche e reinicie o Word.
 
-## Como executar o suplemento no Word 2016 para Windows
+## <a name="how-to-run-the-add-in-in-word-2016-for-windows"></a>Como executar o suplemento no Word 2016 para Windows
 
 1. Abra um documento do Word.
 2. Na guia **Inserir** no Word 2016, escolha **Meus Suplementos**.
@@ -76,30 +76,26 @@ Nesse momento, esse suplemento do exemplo foi implementado. Agora, você precisa
 6. O suplemento será carregado no painel de tarefas se os comandos de suplemento não forem compatíveis com sua versão do Word. Você precisará inserir uma imagem no documento do Word para usar a funcionalidade do suplemento.
 7. Selecione uma imagem no documento do Word e carregue-a no painel de tarefas escolhendo *Carregar imagem a partir do doc*. Agora você pode inserir os textos explicativos na imagem. Escolha *Inserir imagem no documento* para posicionar a imagem atualizada no documento do Word. O suplemento gerará descrições de espaço reservado para cada um dos textos explicativos.
 
-## Perguntas frequentes
+## <a name="faq"></a>Perguntas frequentes
 
 * Os comandos de suplemento funcionarão no Mac e no iPad? Não, eles não funcionarão no Mac ou no iPad desde a publicação deste arquivo Leiame.
 * Por que meu suplemento não é exibido na janela **Meus Suplementos**? Pode haver um erro no manifesto de seu suplemento. Sugerimos que você valide o manifesto no [esquema do manifesto](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD).
 * Por que o arquivo de função não é chamado para meus comandos de suplemento? Os comandos de suplemento exigem HTTPS. Como os comandos de suplemento exigem TLS e não existe uma interface do usuário, não é possível ver se há um problema de certificado. Se você tiver que aceitar um certificado inválido no painel de tarefas, o comando de suplemento não funcionará.
 * Por que os comandos de instalação do npm travam? Eles provavelmente não estão travados. Eles demoram um pouco para iniciar no Windows.
 
-## Perguntas e comentários
+## <a name="questions-and-comments"></a>Perguntas e comentários
 
 Gostaríamos de saber sua opinião sobre o exemplo de suplemento do Word Texto explicativo da imagem. Você pode enviar perguntas e sugestões na seção [Problemas](https://github.com/OfficeDev/Word-Add-in-TypeScript-Canvas/issues) deste repositório.
 
 As perguntas sobre o desenvolvimento de suplementos em geral devem ser postadas no [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Não deixe de marcar as perguntas ou comentários com [office-js], [word-addins] e [API]. Estamos observando essas marcas.
 
-## Saiba mais
+## <a name="learn-more"></a>Learn more
 
 Veja mais recursos para ajudá-lo a criar suplementos baseados na API Javascript do Word:
 
-* [Visão geral da plataforma de Suplementos do Office](https://msdn.microsoft.com/pt-br/library/office/jj220082.aspx)
-* [Suplementos do Word](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins.md)
-* [Visão geral da programação de suplementos do Word](https://github.com/OfficeDev/office-js-docs/blob/master/word/word-add-ins-programming-guide.md)
-* [Explorador de trecho para Word](http://officesnippetexplorer.azurewebsites.net/#/snippets/word)
-* [Referência da API JavaScript para suplementos do Word](https://github.com/OfficeDev/office-js-docs/tree/master/word/word-add-ins-javascript-reference)
-* [Exemplo HistóriasEngraçadas](https://github.com/OfficeDev/Word-Add-in-SillyStories) - saiba como carregar arquivos docx a partir de um serviço e inserir os arquivos em um documento aberto do Word.
+* [Exemplos e documentação de suplementos do Word](https://dev.office.com/word)
+* [Exemplo de histórias engraçadas](https://github.com/OfficeDev/Word-Add-in-SillyStories) – Saiba como carregar arquivos docx a partir de um serviço e inserir os arquivos em um documento aberto do Word.
 * [Exemplo de Autenticação de Servidor de Suplemento do Office para Node.js](https://github.com/OfficeDev/Office-Add-in-Nodejs-ServerAuth) - saiba como usar os provedores OAuth do Azure e do Google para autenticar usuários de suplementos.
 
-## Direitos autorais
+## <a name="copyright"></a>Direitos autorais
 Copyright © 2016 Microsoft. Todos os direitos reservados.
