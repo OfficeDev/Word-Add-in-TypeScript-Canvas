@@ -1,0 +1,19 @@
+### YamlMime:Sample
+sample:
+- name: 'Word add-in: Load, edit, and insert images'
+  path: ''
+  description: Learn how you can use TypeScript and the HTML Canvas API to extend the image editing capability in a Word document.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-ins
+  azureDeploy: ''
+  author: MIchaelMainer
+  platforms: []
+  languages:
+  - TypeScript
+  extensions:
+    products:
+    - Word
+    scenarios: []
